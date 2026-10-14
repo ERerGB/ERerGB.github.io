@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hacker | Prompt regression and optimization | ERerGB</title>
+<meta name="description" content="An agent skill for corpus-evaluated prompt improvement: diagnose failures, propose targeted mutations, and keep a regression gate.">
+<link rel="canonical" href="https://erergb.github.io/projects/hacker/">
+<link rel="stylesheet" href="/projects/styles.css">
+</head>
+<body>
+<main class="wrap">
+<header>
+<nav>
+<a href="/projects/">All projects</a>
+</nav>
+<p class="eyebrow">Prompt regression and optimization</p>
+<h1>Hacker</h1>
+<p class="lede">An agent skill for corpus-evaluated prompt improvement: diagnose failures, propose targeted mutations, and keep a regression gate.</p>
+<p>
+<a class="cta" href="https://github.com/ERerGB/hacker">View source and README on GitHub</a>
+</p>
+</header>
+<section class="panel detail">
+<h2>Improve prompts with a regression gate</h2>
+<p>A prompt can fix one edge case while breaking several that previously worked. Hacker uses a labeled example corpus to score a proposed prompt mutation against the existing cases. It diagnoses failures, researches a targeted change, and records whether the scored cycle should be accepted or rolled back. This is useful for classifiers and other prompts with expected outputs. Supply real examples before optimizing; the skill cannot infer correctness from a persuasive prompt alone.</p>
+</section>
+<section class="panel">
+<h2>At a glance</h2>
+<dl>
+<dt>Who it helps</dt>
+<dd>Prompt and agent builders who have examples with expected results.</dd>
+<dt>First useful action</dt>
+<dd>Run one scored prompt iteration against a labeled corpus, then inspect the accept or rollback result.</dd>
+<dt>Scope</dt>
+<dd>A single invocation runs one scored mutation cycle; sustained loops need an external driver.</dd>
+</dl>
+</section>
+<footer>For installation, examples, and the latest project status, read the <a href="https://github.com/ERerGB/hacker">GitHub repository</a>.</footer>
+</main>
+</body>
+</html>
